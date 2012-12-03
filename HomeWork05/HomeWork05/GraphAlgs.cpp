@@ -40,10 +40,9 @@ void tour(Graph* G, int* curTour, EdgeWeight curLen, int* n, int startPnt){
 		if(curLen>bestLen)
 			return;
 		for(int ii=startPnt; ii<*n; ii++){
-			swap(curTour[startPnt],curTour[ii]);
+			if(ii!=startPnt){ swap(curTour[startPnt],curTour[ii]);}
 			tour(G, curTour, curLen+G->weight(curTour[startPnt],curTour[startPnt-1]), n, startPnt+1);
-			swap(curTour[startPnt],curTour[ii]);
+			if(ii!=startPnt){ swap(curTour[startPnt],curTour[ii]);}
 		}
 	}
-
 }
