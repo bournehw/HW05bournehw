@@ -22,4 +22,4 @@
 
 std::pair<std::vector<NodeID>, EdgeWeight> TSP(Graph* G);
 
-void  tour(Graph* G, std::vector<NodeID> curTour, EdgeWeight curLen, int n, int startPnt);
+void  tour(Graph* G, int* curTour, EdgeWeight curLen, int* n, int startPnt);

@@ -123,10 +123,11 @@ int main(int argc, char** argv) {
   //// Uncomment the following three lines once your TSP function has been written
   StarbucksMap SB;
 
-  testSingleTSP(SB, 5, true);
-  testSingleTSP(SB, 5, false);
-
-  //pair<int,int> p = testSpeedTSP(SB, 60, true);
-
+  //testSingleTSP(SB, 5, true);
+  //testSingleTSP(SB, 5, false);
+  cout << "Matrix Graph" <<endl;
+  pair<int,int> p = testSpeedTSP(SB, 9, true);
+  cout << "List Graph" <<endl;
+  p = testSpeedTSP(SB, 9, false);
   return 0;
 }
