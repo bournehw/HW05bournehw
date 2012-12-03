@@ -23,7 +23,8 @@ std::pair<std::vector<NodeID>, EdgeWeight> TSP(Graph* G){
 		bestTour[ii] = ii;
 	}		
 	tour(G, curTour, 0, n, 1);
-
+	delete n;
+	delete curTour;
 	return std::pair<std::vector<NodeID>, EdgeWeight>(bestTour,bestLen);
 }
 
